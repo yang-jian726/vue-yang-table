@@ -1,0 +1,19 @@
+*, *:before, *:after {box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+/* 设置高度*/
+html, body {height: 100%;min-height: 100%;}
+/*去除默认样式、设置字体*/
+body {margin: 0;padding: 0;font-family: "PingFang SC", Microsoft Yahei, tahoma, Helvetica, arial, '\5b8b\4f53', sans-serif;}
+/*设置隐藏，浏览器统一（IE、Safari、Firefox < 22）*/
+[hidden], template, script {display: none;}
+/* 去除链接默认样式*/
+a{background-color: transparent;}
+a:focus {outline: thin dotted;}
+a:active, a:hover {outline: 0;}
+
+textarea, textarea:focus, input:focus, button:focus, select:focus{outline:none;}
+table{max-width: 100%;background-color: transparent;empty-cells: show;border-spacing: 0}
+th,td{padding: 0;box-sizing: border-box;text-align: center}
+.cs_table{table-layout:fixed;word-break:break-all;border-spacing: 0;font-family: "PingFang SC",MicrosoftYaHei, tahoma, Helvetica, arial, '\5b8b\4f53', sans-serif;border: 1px solid #EEEEEE;}
+.cs_table th{color: #999999;font-size: 14px}
+.cs_table td{color: #333333;font-size: 12px}
+.cs_table th,td{text-align: center;height: 52px;border: 1px solid #EEEEEE}

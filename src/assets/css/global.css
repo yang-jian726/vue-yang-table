@@ -1,0 +1,23 @@
+html, body {background-color: #fff;height: 100%;margin:0;padding:0;}
+._height{height: 100%;}
+*{padding:0;margin:0;}
+
+/*float浮动*/
+.l{float: left}
+.r{float: right}
+.clearfix{clear: both}
+.clearfix-left{clear: left}
+.clearfix-right{clear: right}
+
+/*margin-left*/
+.ui_mar_left_4{margin-left: 4px}
+.ui_mar_left_8{margin-left: 8px}
+.ui_mar_left_12{margin-left: 12px}
+.ui_mar_left_24{margin-left: 24px}
+.ui_mar_left_48{margin-left: 48px}
+.ui_mar_left_96{margin-left: 96px}
+/*margin-right*/
+.ui_mar_right_4{margin-right: 4px}
+.ui_mar_right_8{margin-right: 8px}
+/*margin-top*/
+.ui_mar_top_32{margin-top: 32px}
