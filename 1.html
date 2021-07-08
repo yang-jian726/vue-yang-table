@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>无标题文档</title>
+  <style type="text/css">
+    .join_list{ margin:10px;}
+    .join_title{ height:30px; line-height:30px; margin-bottom:4px; padding:0 10px; background:#f3f3f3; text-indent:2em; font-size:14px; cursor:pointer;}
+    .join_title b{ background:#FC3; font-weight:normal;}
+    .join_title span{ float:right; color:#707070; font:bold 18px/30px Arial;}
+    .join_detail{ display:none; padding:5px 0 10px 30px; word-wrap:break-word;overflow:hidden;}
+    .join_detail ul li {list-style: disc inside none;}
+    .join_detail ol li {list-style: decimal inside none;}
+    .join_detail{ line-height:24px;}
+    .form{ background:#cde6fe; padding:3px; float:left; position:relative; left:50%; margin:20px 0 20px -240px; overflow:hidden}
+    input{ width:400px; height:20px; padding:5px; font-size:14px; float:left;}
+    button{ height:32px; float:left; padding:0 15px; background:#009AE2; border:none; color:#fff;}
+  </style>
+</head>
+
+<body>
+<div class="form">
+  <input type="text" placeholder="请输入学校名称" />
+</div>
+<br clear="all" />
+<div class="join_list" id="join_list">
+  <div class="join_title"><span class="join_mark">+</span>你我她</div>
+  <div class="join_detail">
+    我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵
+  </div>
+  <div class="join_title"><span class="join_mark">+</span>是你我他</div>
+  <div class="join_detail">
+    我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵
+  </div>
+  <div class="join_title"><span class="join_mark">+</span>一个兵</div>
+  <div class="join_detail">
+    我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵
+  </div>
+  <div class="join_title"><span class="join_mark">+</span>我是一</div>
+  <div class="join_detail">
+    我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵
+  </div>
+  <div class="join_title"><span class="join_mark">+</span>个兵</div>
+  <div class="join_detail">
+    我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵
+  </div>
+  <div class="join_title"><span class="join_mark">+</span>兵兵</div>
+  <div class="join_detail">
+    我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵
+  </div>
+  <div class="join_title"><span class="join_mark">+</span>我兵</div>
+  <div class="join_detail">
+    我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵
+  </div>
+  <div class="join_title"><span class="join_mark">+</span>是一个兵</div>
+  <div class="join_detail">
+    我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵
+  </div>
+  <div class="join_title"><span class="join_mark">+</span>个兵</div>
+  <div class="join_detail">
+    我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵
+  </div>
+  <div class="join_title"><span class="join_mark">+</span>一个兵</div>
+  <div class="join_detail">
+    我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵我是一个兵
+  </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+  document.getElementsByTagName("input")[0].focus();
+  var oId=document.getElementById("join_list");
+  var aLi=getbyclass("join_title",oId);
+
+  document.onkeyup=function(e){
+    var str=document.getElementsByTagName("input")[0].value;
+
+    if(str.length>0){
+      var re=new RegExp(str,'g');
+      for(var i=0;i<aLi.length;i++){
+        var t=aLi[i].innerText||aLi[i].textContent;
+        if(aLi[i].childNodes.nodeType==3){
+        }
+        if(re.test(t)){
+          aLi[i].style.display="block";
+          aLi[i].innerHTML=t.replace(re,"<b>"+str+"</b>");
+        }else{
+          aLi[i].style.display="none";
+        }
+      }
+    }
+
+    if(document.activeElement.type=='text'){
+      if(str.length==0){
+        location.reload(false);
+      }
+    }
+  }
+
+
+  function getbyclass(oClass,Oparent){
+    var oParent=oParent||document;
+    if(Oparent.getElementsByClassName){
+      return Oparent.getElementsByClassName(oClass)
+    }else{
+      var re=[];
+      var reg=new RegExp("\\b"+oClass+"\\b")
+      var ch=oParent.getElementsByTagName("div");
+      for(var i=0;i<ch.length;i++){
+        var str=ch[i].className;
+        if(reg.test(str)){
+          re.push(ch[i]);
+        }
+      }
+      return re;
+    }
+  }
+
+</script>
